@@ -18,9 +18,8 @@ def get_all_names_with_distance_one(a, b):
         return b
 
 
-def produce_clean_list(lst):
-    filter_out_none = [i for i in lst if i]
-    return list(set(filter_out_none))
+def filter_null_and_duplicates(lst):
+    return list(set([i for i in lst if i]))
 
 
 if __name__ == '__main__':
@@ -30,4 +29,4 @@ if __name__ == '__main__':
     for i in names_to_check:
         result.append(get_all_names_with_distance_one("Luca", i))
 
-print(produce_clean_list(result))
+print(filter_null_and_duplicates(result))
